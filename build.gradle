@@ -8,17 +8,19 @@ apply plugin:"idea"
 group = 'com.sms'
 version = '0.0.1-SNAPSHOT'
 
-/*
+
 java {
 	sourceCompatibility = '16'
 }
-*/
 
+/*
 java {
+
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(16)
 	}
 }
+*/
 
 repositories {
 	mavenCentral()
