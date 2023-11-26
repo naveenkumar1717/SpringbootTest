@@ -1,5 +1,8 @@
 # Use a base image with Java and Alpine Linux
-FROM openjdk:11-jre-slim
+#FROM openjdk:11-jre-slim
+#FROM openjdk:22-jdk-bullseye
+FROM openjdk:16-alpine
+
 
 # Set the working directory in the container
 WORKDIR /app
@@ -14,6 +17,9 @@ COPY settings.gradle .
 
 # Copy the source code
 COPY src src
+
+COPY build/libs/springboot-0.0.1-SNAPSHOT.jar /app/app.jar
+
 
 # Build the application
 RUN ./gradlew build
